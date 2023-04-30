@@ -1,0 +1,164 @@
+:root {
+  --red: #ce1212;
+  --pink: #f5eaea;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-color: var(--pink);
+}
+
+.wrapper {
+  padding: 0.5em;
+}
+
+.inner-holder {
+  display: inline-flex;
+  background-color: white;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.header-logo-img-div {
+  display: flex;
+  justify-content: center;
+}
+
+.header-logo-img {
+  width: 4em;
+  height: 4em;
+}
+
+.title-div {
+  display: inline-flex;
+  justify-content: center;
+  gap: 1em;
+  font-family: monospace;
+  font-size: 1.7em;
+}
+
+.title-first-part {
+  margin: 0;
+  color: black;
+}
+.title-second-part {
+  margin: 0;
+  color: var(--red);
+}
+
+.input-holder-div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.input-field-holder-div {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.hour-input-div {
+  width: auto;
+  height: auto;
+}
+
+.minutes-input-div {
+  width: auto;
+  height: auto;
+}
+
+.hour-input {
+  height: auto;
+  width: 2.2em;
+}
+
+.minutes-input {
+  height: auto;
+  width: 2.2em;
+}
+
+.input-font {
+  font-size: 2em;
+  font-family: monospace;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-color: var(--red) !important;
+}
+.input-font::placeholder {
+  color: var(--pink);
+}
+
+.button-input-div {
+  display: flex;
+  justify-content: center;
+  padding: 0px !important;
+}
+
+.input-button {
+  color: white;
+  background-color: var(--red);
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.input-button:hover {
+  opacity: 70%;
+}
+
+.input-text-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.35em;
+}
+
+.input-text {
+  font-family: monospace;
+  color: black;
+  margin: 0px !important;
+}
+
+.info-text-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.info-text {
+  font-family: monospace;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
