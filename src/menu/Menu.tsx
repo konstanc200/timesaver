@@ -32,25 +32,16 @@ function TimePicker() {
     let min = +timeValueMinuts;
     setTimeValueSum((hour * 60 + min) * 60);
 
-    chrome.storage.sync.set({ timeValueHours }, () => {
-      console.log(`Time Value Hours from Chorome API is ${timeValueHours}`);
-    });
+    chrome.storage.sync.set({ timeValueHours });
 
-    chrome.storage.sync.set({ timeValueMinuts }, () => {
-      console.log(`Time Value Hours from Chorome API is ${timeValueMinuts}`);
-    });
+    chrome.storage.sync.set({ timeValueMinuts });
   };
 
-  chrome.storage.sync.set({ timeValueSum }, () => {
-    console.log(`Time Value Sum from Chorome API is ${timeValueSum}`);
-  });
+  chrome.storage.sync.set({ timeValueSum });
 
   useEffect(() => {
     chrome.storage.sync.get(["timeValueSum"], (response) => {
       setTimeValue(response.timeValueSum);
-      console.log(
-        `TimeValueSum from the app component: ${response.timeValueSum}`
-      );
     });
     try {
       if (controlEffects.current) {
@@ -58,17 +49,11 @@ function TimePicker() {
           if (typeof response.timeValueHours != "undefined") {
             setTimeValueHours(response.timeValueHours);
           }
-          console.log(
-            `TimeValueSum from the app component Hours: ${response.timeValueHours}`
-          );
         });
         chrome.storage.sync.get(["timeValueMinuts"], (response) => {
           if (typeof response.timeValueMinuts != "undefined") {
             setTimeValueMinutes(response.timeValueMinuts);
           }
-          console.log(
-            `TimeValueSum from the app component Minutes: ${response.timeValueMinuts}`
-          );
         });
       }
     } catch {

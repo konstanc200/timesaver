@@ -136,6 +136,10 @@ body {
   opacity: 70%;
 }
 
+.input-button:active {
+  opacity: 45%;
+}
+
 .input-text-div {
   display: flex;
   flex-direction: row;
