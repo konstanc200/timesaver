@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.mono-font {
+  font-family: "Martian Mono", monospace !important;
+  font-size: 2.5vh !important;
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import "./font.css";
 
 function Timer() {
   const [milliseconds, setMilliseconds] = useState<number>(0);
@@ -104,14 +105,13 @@ function Timer() {
             whiteSpace: "nowrap",
           }}
         >
-          <h3 style={{ all: "unset" }}>Time spent:</h3>
+          <h3 style={{ all: "unset", fontSize: "1.7vh" }}>Time spent:</h3>
           <br />
           <div
             style={{
               all: "unset",
               padding: "0",
               color: color,
-              fontSize: "2.7vh",
             }}
           >
             {hours <= 9 ? <>0{hours}</> : <>{hours}</>}:
@@ -130,10 +130,9 @@ function App() {
     <div
       style={{
         all: "unset",
-        fontSize: "2vh",
         display: "block",
-        fontFamily: "monospace",
       }}
+      className="mono-font"
       onLoad={() => console.log("Div Loads Fine")}
     >
       <Timer />
